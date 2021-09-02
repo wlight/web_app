@@ -1,0 +1,9 @@
+{"level":"ERROR","time":"2021-09-01T17:00:57.352+0800","caller":"mysql/mysql.go:30","msg":"mysql connect failed","error":"Error 1049: Unknown database 'web_app'"}
+{"level":"FATAL","time":"2021-09-01T17:29:38.599+0800","caller":"gin_demo/main.go:61","msg":"listen: %s\n","error":"listen tcp :8081: bind: An attempt was made to access a socket in a way forbidden by its access permissions."}
+{"level":"ERROR","time":"2021-09-02T09:00:38.671+0800","caller":"mysql/mysql.go:30","msg":"mysql connect failed","error":"dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"FATAL","time":"2021-09-02T09:01:18.327+0800","caller":"gin_demo/main.go:61","msg":"listen","error":"listen tcp :8081: bind: An attempt was made to access a socket in a way forbidden by its access permissions."}
+{"level":"ERROR","time":"2021-09-02T16:10:14.719+0800","caller":"mysql/mysql.go:30","msg":"mysql connect failed","error":"dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2021-09-02T16:12:33.291+0800","caller":"logger/logger.go:76","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36","errors":"","cost":0.0000974}
+{"level":"INFO","time":"2021-09-02T16:12:35.362+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36","errors":"","cost":0.000001}
+{"level":"INFO","time":"2021-09-02T16:14:54.071+0800","caller":"web_app/main.go:73","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-02T16:14:54.073+0800","caller":"web_app/main.go:82","msg":"Server exiting"}
