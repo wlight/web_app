@@ -7,3 +7,43 @@
 {"level":"INFO","time":"2021-09-02T16:12:35.362+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36","errors":"","cost":0.000001}
 {"level":"INFO","time":"2021-09-02T16:14:54.071+0800","caller":"web_app/main.go:73","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-02T16:14:54.073+0800","caller":"web_app/main.go:82","msg":"Server exiting"}
+{"level":"ERROR","time":"2021-09-07T15:54:39.164+0800","caller":"mysql/mysql.go:30","msg":"mysql connect failed","error":"dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2021-09-07T15:56:36.817+0800","caller":"logger/logger.go:76","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36","errors":"","cost":0.0001588}
+{"level":"INFO","time":"2021-09-07T15:56:39.243+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36","errors":"","cost":0.000001}
+{"level":"INFO","time":"2021-09-08T11:04:11.017+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-08T11:04:11.139+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-09T15:48:43.871+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003649}
+{"level":"INFO","time":"2021-09-09T15:48:56.649+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001286}
+{"level":"INFO","time":"2021-09-09T15:49:01.634+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0000815}
+{"level":"INFO","time":"2021-09-09T15:55:31.685+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001934}
+{"level":"INFO","time":"2021-09-09T15:55:33.966+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-09T15:55:33.967+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"ERROR","time":"2021-09-09T15:55:39.328+0800","caller":"controllers/user.go:26","msg":"SignUp with invalid param"}
+{"level":"INFO","time":"2021-09-09T15:55:39.328+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0005557}
+{"level":"INFO","time":"2021-09-09T15:55:44.291+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0002367}
+{"level":"INFO","time":"2021-09-10T09:13:30.780+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T09:13:30.785+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T09:13:54.792+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.000384}
+{"level":"ERROR","time":"2021-09-10T09:14:00.828+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-09-10T09:14:00.828+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003195}
+{"level":"ERROR","time":"2021-09-10T09:14:18.951+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-09-10T09:14:18.952+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0008043}
+{"level":"INFO","time":"2021-09-10T09:15:37.079+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T09:15:37.080+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T09:15:42.419+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003197}
+{"level":"ERROR","time":"2021-09-10T09:15:48.477+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-09-10T09:15:48.477+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003306}
+{"level":"INFO","time":"2021-09-10T10:24:56.770+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T10:24:56.772+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T10:36:22.666+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.00033}
+{"level":"INFO","time":"2021-09-10T10:44:09.565+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T10:44:09.567+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T10:44:15.424+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.000201}
+{"level":"INFO","time":"2021-09-10T10:46:09.421+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T10:46:09.423+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T10:46:15.259+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.000191}
+{"level":"INFO","time":"2021-09-10T10:49:56.162+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-10T10:49:56.164+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-10T10:50:02.494+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001886}
+{"level":"INFO","time":"2021-09-10T10:50:10.991+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001453}
+{"level":"INFO","time":"2021-09-10T10:53:22.980+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36","errors":"","cost":0.0000456}

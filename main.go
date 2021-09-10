@@ -3,16 +3,18 @@ package main
 import (
 	"context"
 	"fmt"
-	"web_app/dao/mysql"
-	"web_app/dao/redis"
-	"web_app/logger"
-	"web_app/router"
-	"web_app/settings"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+	"web_app/controllers"
+	"web_app/dao/mysql"
+	"web_app/dao/redis"
+	"web_app/logger"
+	"web_app/pkg/snowflake"
+	"web_app/router"
+	"web_app/settings"
 
 	"go.uber.org/zap"
 )
@@ -48,8 +50,21 @@ func main() {
 	}
 
 	defer redis.Close()
+
+	// 5、初始化gin validator 翻译
+	if err := controllers.InitTrans("zh"); err != nil {
+		fmt.Printf("init validator trans failed, err:%v\n", err)
+		return
+	}
+
 	// 5、注册路由
 	r := router.Setup()
+	// 6、初始化雪花算法
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineId); err != nil {
+		fmt.Printf("init snowflake failed, err:%v\n", err)
+		return
+	}
+
 	// 6、启动服务（优雅关机）
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),

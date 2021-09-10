@@ -1,8 +1,9 @@
 package router
 
 import (
-	"web_app/logger"
 	"net/http"
+	"web_app/controllers"
+	"web_app/logger"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,6 +14,11 @@ func Setup() *gin.Engine {
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, "hello")
 	})
+
+
+	// 注册路由
+	r.POST("/signup", controllers.SignUpHandler)
+
 
 	return r
 }
