@@ -1,16 +1,16 @@
 package mysql
 
 import (
-	"database/sql"
 	"fmt"
 	"web_app/settings"
 
 	"go.uber.org/zap"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/jmoiron/sqlx"
 )
 
-var db *sql.DB
+var db *sqlx.DB
 
 func Init(conf *settings.MysqlConfig) (err error) {
 	// DSN
@@ -20,7 +20,7 @@ func Init(conf *settings.MysqlConfig) (err error) {
 		conf.Host,
 		conf.Port,
 		conf.Dbname)
-	db, err = sql.Open("mysql", dsn)
+	db, err = sqlx.Connect("mysql", dsn)
 	if err != nil {
 		zap.L().Error("mysql open failed", zap.Error(err))
 		return

@@ -10,7 +10,7 @@ import (
 )
 
 func SignUpHandler(c *gin.Context) {
-	// 获取参数和校验
+	// 1、获取参数和校验
 	var p  = new(models.ParamSignUp)
 	if err := c.ShouldBindJSON(p); err != nil {
 		// 获取validator.ValidationErrors类型的errors
@@ -41,10 +41,10 @@ func SignUpHandler(c *gin.Context) {
 	// }
 
 	
-	// 注册逻辑
+	// 2、注册逻辑
 	logic.SignUp(p)
 
-	// 返回响应
+	// 3、返回响应
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "注册成功",
 	})
