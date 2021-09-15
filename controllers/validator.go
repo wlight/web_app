@@ -33,7 +33,7 @@ func InitTrans(locale string) (err error) {
 		})
 
 		// 为SignUpParam注册自定义校验方法
-		v.RegisterStructValidation(SignUpParamStructLevelValidation, models.ParamSignUp{})
+		v.RegisterStructValidation(SignUpParamStructLevelValidation, models.SignUpParam{})
 
 		zhT := zh.New() // 中文翻译器
 		enT := en.New() // 英文翻译器
@@ -74,10 +74,9 @@ func removeTopStruct(fields map[string]string) map[string]string {
 	return res
 }
 
-
 // SignUpParamStructLevelValidation 自定义SignUpParam结构体校验函数
 func SignUpParamStructLevelValidation(sl validator.StructLevel) {
-	su := sl.Current().Interface().(models.ParamSignUp)
+	su := sl.Current().Interface().(models.SignUpParam)
 
 	if su.Password != su.RePassword {
 		// 输出错误提示信息，最后一个参数就是传递的param

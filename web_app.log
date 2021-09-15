@@ -18,20 +18,20 @@
 {"level":"INFO","time":"2021-09-09T15:55:31.685+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001934}
 {"level":"INFO","time":"2021-09-09T15:55:33.966+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-09T15:55:33.967+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
-{"level":"ERROR","time":"2021-09-09T15:55:39.328+0800","caller":"controllers/user.go:26","msg":"SignUp with invalid param"}
+{"level":"ERROR","time":"2021-09-09T15:55:39.328+0800","caller":"controllers/user.go:26","msg":"SignUpParam with invalid param"}
 {"level":"INFO","time":"2021-09-09T15:55:39.328+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0005557}
 {"level":"INFO","time":"2021-09-09T15:55:44.291+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0002367}
 {"level":"INFO","time":"2021-09-10T09:13:30.780+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-10T09:13:30.785+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
 {"level":"INFO","time":"2021-09-10T09:13:54.792+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.000384}
-{"level":"ERROR","time":"2021-09-10T09:14:00.828+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"ERROR","time":"2021-09-10T09:14:00.828+0800","caller":"controllers/user.go:17","msg":"SignUpParam with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
 {"level":"INFO","time":"2021-09-10T09:14:00.828+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003195}
-{"level":"ERROR","time":"2021-09-10T09:14:18.951+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"ERROR","time":"2021-09-10T09:14:18.951+0800","caller":"controllers/user.go:17","msg":"SignUpParam with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
 {"level":"INFO","time":"2021-09-10T09:14:18.952+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0008043}
 {"level":"INFO","time":"2021-09-10T09:15:37.079+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-10T09:15:37.080+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
 {"level":"INFO","time":"2021-09-10T09:15:42.419+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003197}
-{"level":"ERROR","time":"2021-09-10T09:15:48.477+0800","caller":"controllers/user.go:17","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"ERROR","time":"2021-09-10T09:15:48.477+0800","caller":"controllers/user.go:17","msg":"SignUpParam with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
 {"level":"INFO","time":"2021-09-10T09:15:48.477+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003306}
 {"level":"INFO","time":"2021-09-10T10:24:56.770+0800","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-09-10T10:24:56.772+0800","caller":"web_app/main.go:90","msg":"Server exiting"}
@@ -47,3 +47,33 @@
 {"level":"INFO","time":"2021-09-10T10:50:02.494+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001886}
 {"level":"INFO","time":"2021-09-10T10:50:10.991+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0001453}
 {"level":"INFO","time":"2021-09-10T10:53:22.980+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36","errors":"","cost":0.0000456}
+{"level":"INFO","time":"2021-09-13T12:45:07.119+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0003113}
+{"level":"INFO","time":"2021-09-13T12:45:13.826+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0982611}
+{"level":"INFO","time":"2021-09-13T12:48:05.561+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T12:48:05.563+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"ERROR","time":"2021-09-13T12:48:14.700+0800","caller":"controllers/user.go:45","msg":"注册失败","error":"Error 1364: Field 'gender' doesn't have a default value"}
+{"level":"INFO","time":"2021-09-13T12:48:14.748+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.1000896}
+{"level":"INFO","time":"2021-09-13T12:49:57.509+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0278367}
+{"level":"ERROR","time":"2021-09-13T12:50:16.407+0800","caller":"controllers/user.go:45","msg":"注册失败","error":"用户已存在"}
+{"level":"INFO","time":"2021-09-13T12:50:16.415+0800","caller":"logger/logger.go:76","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0123789}
+{"level":"INFO","time":"2021-09-13T13:24:46.079+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T13:24:46.090+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"ERROR","time":"2021-09-13T14:23:12.691+0800","caller":"controllers/user.go:45","msg":"注册失败","error":"用户已存在"}
+{"level":"INFO","time":"2021-09-13T14:23:12.700+0800","caller":"logger/logger.go:87","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0512577}
+{"level":"INFO","time":"2021-09-13T14:26:44.929+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T14:26:44.936+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-13T14:26:53.560+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T14:26:53.566+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-13T14:28:04.664+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T14:28:04.671+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2021-09-13T14:56:25.258+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0137941}
+{"level":"ERROR","time":"2021-09-13T14:56:29.921+0800","caller":"controllers/user.go:37","msg":"登录失败","error":"用户密码不正确"}
+{"level":"INFO","time":"2021-09-13T14:56:29.924+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.008042}
+{"level":"ERROR","time":"2021-09-13T14:57:30.976+0800","caller":"controllers/user.go:37","msg":"登录失败","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2021-09-13T14:57:30.977+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0098815}
+{"level":"INFO","time":"2021-09-13T15:16:09.696+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T15:16:09.698+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"ERROR","time":"2021-09-13T15:16:15.643+0800","caller":"controllers/user.go:37","msg":"登录失败","username":"xiaoa","error":"用户不存在"}
+{"level":"INFO","time":"2021-09-13T15:16:15.647+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.28.4","errors":"","cost":0.0103089}
+{"level":"INFO","time":"2021-09-13T17:39:41.144+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-09-13T17:39:41.255+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
