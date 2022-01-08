@@ -11,9 +11,9 @@ import (
 
 func SignUpHandler(c *gin.Context) {
 	// 1、获取参数和校验
-	var p  = new(models.ParamSignUp)
+	var p = new(models.ParamSignUp) // 获取一个指针
 	if err := c.ShouldBindJSON(p); err != nil {
-		// 获取validator.ValidationErrors类型的errors
+		// 获取validator.ValidationErrors类型的errors，判断是否为validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
 			// 非validator.ValidationErrors类型错误直接返回
@@ -22,7 +22,6 @@ func SignUpHandler(c *gin.Context) {
 			})
 			return
 		}
-
 
 		// validator.ValidationErrors类型错误则进行翻译
 		c.JSON(http.StatusOK, gin.H{
@@ -40,7 +39,6 @@ func SignUpHandler(c *gin.Context) {
 	// 	return
 	// }
 
-	
 	// 2、注册逻辑
 	logic.SignUp(p)
 
