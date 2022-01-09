@@ -29,3 +29,14 @@
 {"level":"INFO","time":"2022-01-09T16:44:02.207+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.027258161}
 {"level":"ERROR","time":"2022-01-09T16:44:12.285+0800","caller":"controllers/user.go:80","msg":"logic.Login failed","error":"用户密码错误"}
 {"level":"INFO","time":"2022-01-09T16:44:12.285+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.007559492}
+{"level":"INFO","time":"2022-01-09T17:32:45.574+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-01-09T17:32:45.576+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-01-09T17:33:08.203+0800","caller":"controllers/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2022-01-09T17:33:08.203+0800","caller":"logger/logger.go:87","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.000760642}
+{"level":"ERROR","time":"2022-01-09T17:33:33.315+0800","caller":"controllers/user.go:35","msg":"logic.SignUp failed","error":"用户已存在"}
+{"level":"INFO","time":"2022-01-09T17:33:33.317+0800","caller":"logger/logger.go:87","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.011119664}
+{"level":"ERROR","time":"2022-01-09T17:33:48.379+0800","caller":"controllers/user.go:66","msg":"logic.Login failed","username":"999","error":"密码错误"}
+{"level":"INFO","time":"2022-01-09T17:33:48.379+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.007920317}
+{"level":"INFO","time":"2022-01-09T17:34:06.709+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"Apache-HttpClient/4.5.13 (Java/11.0.11)","errors":"","cost":0.013939315}
+{"level":"INFO","time":"2022-01-09T17:34:30.302+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-01-09T17:34:30.305+0800","caller":"web_app/main.go:98","msg":"Server exiting"}

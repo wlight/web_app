@@ -8,6 +8,12 @@ import (
 	"web_app/models"
 )
 
+var (
+	ErrorUserExist       = errors.New("用户已存在")
+	ErrorUserNotExist    = errors.New("用户不存在")
+	ErrorInvaildPassword = errors.New("密码错误")
+)
+
 const secret = "encrypt"
 
 // CheckUserExist 检查用户是否存在
@@ -20,7 +26,7 @@ func CheckUserExist(username string) (err error) {
 	}
 
 	if count > 0 {
-		return errors.New("用户已存在")
+		return ErrorUserExist
 	}
 
 	return
@@ -42,13 +48,13 @@ func Login(user *models.User) (err error) {
 	sqlStr := "select user_id, password from user where username = ?"
 	err = db.Get(user, sqlStr, user.Username)
 	if err == sql.ErrNoRows {
-		return errors.New("用户不存在")
+		return ErrorUserNotExist
 	}
 	if err != nil {
 		return err
 	}
 	if password != user.Password {
-		return errors.New("密码错误")
+		return ErrorInvaildPassword
 	}
 	return
 }
