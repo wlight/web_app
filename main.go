@@ -28,7 +28,7 @@ func main() {
 		return
 	}
 	// 2、初始化日志
-	if err := logger.Init(settings.Conf.Log); err != nil {
+	if err := logger.Init(settings.Conf.Log, settings.Conf.Mode); err != nil {
 		fmt.Printf("init settings failed, err:%v\n", err)
 		return
 	}
@@ -58,7 +58,7 @@ func main() {
 	}
 
 	// 5、注册路由
-	r := router.Setup()
+	r := router.Setup(settings.Conf.Mode)
 	// 6、初始化雪花算法
 	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineId); err != nil {
 		fmt.Printf("init snowflake failed, err:%v\n", err)

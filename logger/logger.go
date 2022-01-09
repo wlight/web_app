@@ -1,7 +1,6 @@
 package logger
 
 import (
-	"web_app/settings"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -9,6 +8,7 @@ import (
 	"runtime/debug"
 	"strings"
 	"time"
+	"web_app/settings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/natefinch/lumberjack"
@@ -18,7 +18,7 @@ import (
 
 var lg *zap.Logger
 
-func Init(conf *settings.LogConfig) (err error) {
+func Init(conf *settings.LogConfig, mode string) (err error) {
 	writeSyncer := getLogWriter(
 		conf.Filename,
 		conf.MaxSize,
@@ -32,7 +32,18 @@ func Init(conf *settings.LogConfig) (err error) {
 	if err != nil {
 		return
 	}
-	core := zapcore.NewCore(encoder, writeSyncer, l)
+
+	var core zapcore.Core
+	if mode == "dev" {
+		// 开发模式，直接打印到控制台同时写入日志文件
+		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
+		core = zapcore.NewTee(
+			zapcore.NewCore(encoder, writeSyncer, l),
+			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zapcore.DebugLevel),
+		)
+	} else {
+		core = zapcore.NewCore(encoder, writeSyncer, l)
+	}
 
 	lg = zap.New(core, zap.AddCaller())
 
