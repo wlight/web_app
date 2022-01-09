@@ -15,10 +15,8 @@ func Setup() *gin.Engine {
 		c.JSON(http.StatusOK, "hello")
 	})
 
-
 	// 注册路由
 	r.POST("/signup", controllers.SignUpHandler)
-
 
 	return r
 }

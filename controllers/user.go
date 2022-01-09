@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"go.uber.org/zap"
 	"net/http"
 	"web_app/logic"
 	"web_app/models"
@@ -40,7 +41,13 @@ func SignUpHandler(c *gin.Context) {
 	// }
 
 	// 2、注册逻辑
-	logic.SignUp(p)
+	if err := logic.SignUp(p); err != nil {
+		zap.L().Error("logic.SignUp failed", zap.Error(err))
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "注册失败",
+		})
+		return
+	}
 
 	// 3、返回响应
 	c.JSON(http.StatusOK, gin.H{
