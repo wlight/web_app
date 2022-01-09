@@ -26,3 +26,11 @@ func SignUp(p *models.ParamSignUp) (err error) {
 
 	return
 }
+
+func Login(p *models.ParamLogin) (err error) {
+	// 对比密码是否正确
+	if err = mysql.CheckUserPassword(p.Username, p.Password); err != nil {
+		return err
+	}
+	return
+}

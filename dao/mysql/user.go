@@ -35,6 +35,20 @@ func InsertUser(user *models.User) (err error) {
 	return
 }
 
+func CheckUserPassword(username string, oPassword string) (err error) {
+	sqlStr := "select user_id, password from user where username = ?"
+	var user models.User
+	err = db.Get(&user, sqlStr, username)
+	if err != nil {
+		return err
+	}
+	password := encryptPassword(oPassword)
+	if password != user.Password {
+		return errors.New("用户密码错误")
+	}
+	return
+}
+
 func encryptPassword(oPassword string) string {
 	hash := md5.New()
 	hash.Write([]byte(secret))
