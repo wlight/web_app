@@ -14,6 +14,8 @@ func SignUpHandler(c *gin.Context) {
 	// 1、获取参数和校验
 	var p = new(models.ParamSignUp) // 获取一个指针
 	if err := c.ShouldBindJSON(p); err != nil {
+		// 请求参数有误，直接返回响应
+		zap.L().Error("SignUp with invalid param", zap.Error(err))
 		// 获取validator.ValidationErrors类型的errors，判断是否为validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
