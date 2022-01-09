@@ -79,9 +79,9 @@ func LoginHandler(c *gin.Context) {
 	}
 	// 2. 登录逻辑
 	if err := logic.Login(p); err != nil {
-		zap.L().Error("logic.Login failed", zap.Error(err))
+		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
 		c.JSON(http.StatusOK, gin.H{
-			"msg": "登录失败",
+			"msg": "用户名和密码错误",
 		})
 		return
 	}
