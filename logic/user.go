@@ -3,6 +3,7 @@ package logic
 import (
 	"web_app/dao/mysql"
 	"web_app/models"
+	"web_app/pkg/jwt"
 	"web_app/pkg/snowflake"
 )
 
@@ -27,12 +28,17 @@ func SignUp(p *models.ParamSignUp) (err error) {
 	return
 }
 
-func Login(p *models.ParamLogin) error {
+func Login(p *models.ParamLogin) (token string, err error) {
 	user := &models.User{
 		Username: p.Username,
 		Password: p.Password,
 	}
 
 	// 用户登录
-	return mysql.Login(user)
+
+	if err := mysql.Login(user); err != nil {
+		return "", err
+	}
+
+	return jwt.GenToken(user.UserId, user.Username)
 }
