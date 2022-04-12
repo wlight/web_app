@@ -28,7 +28,7 @@ func SignUp(p *models.ParamSignUp) (err error) {
 	return
 }
 
-func Login(p *models.ParamLogin) (token string, err error) {
+func Login(p *models.ParamLogin) (aToken, rToken string, err error) {
 	user := &models.User{
 		Username: p.Username,
 		Password: p.Password,
@@ -37,7 +37,7 @@ func Login(p *models.ParamLogin) (token string, err error) {
 	// 用户登录
 
 	if err := mysql.Login(user); err != nil {
-		return "", err
+		return "", "", err
 	}
 
 	return jwt.GenToken(user.UserId, user.Username)

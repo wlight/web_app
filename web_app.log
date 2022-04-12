@@ -46,3 +46,32 @@
 {"level":"INFO","time":"2022-01-23T13:53:59.413+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.104291272}
 {"level":"INFO","time":"2022-01-23T13:54:12.202+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.010696506}
 {"level":"INFO","time":"2022-01-23T14:10:48.012+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000023562}
+{"level":"ERROR","time":"2022-02-02T10:01:31.713+0800","caller":"mysql/mysql.go:25","msg":"mysql open failed","error":"dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2022-02-02T10:03:21.774+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000701882}
+{"level":"INFO","time":"2022-02-02T10:04:10.188+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000178724}
+{"level":"INFO","time":"2022-02-02T10:05:45.297+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000325605}
+{"level":"INFO","time":"2022-02-02T10:11:38.644+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-02-02T10:11:38.647+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-02-02T10:12:40.651+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000631508}
+{"level":"INFO","time":"2022-02-03T09:38:14.331+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-02-03T09:38:14.334+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-02-03T09:38:29.146+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-02-03T09:38:29.148+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-02-03T10:00:01.864+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000495468}
+{"level":"INFO","time":"2022-02-03T10:16:14.242+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-02-03T10:16:14.249+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-02-07T21:20:45.791+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.312202835}
+{"level":"INFO","time":"2022-02-13T14:43:42.810+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-02-13T14:43:42.815+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-04-10T10:17:18.634+0800","caller":"mysql/mysql.go:25","msg":"mysql open failed","error":"dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2022-04-10T10:21:05.936+0800","caller":"logger/logger.go:87","msg":"/","status":404,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36","errors":"","cost":0.000003364}
+{"level":"INFO","time":"2022-04-10T10:21:08.950+0800","caller":"logger/logger.go:87","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36","errors":"","cost":0.000000854}
+{"level":"INFO","time":"2022-04-11T21:21:41.469+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-04-11T21:21:41.485+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-04-11T21:34:23.030+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.050443971}
+{"level":"INFO","time":"2022-04-11T22:31:50.738+0800","caller":"web_app/main.go:89","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-04-11T22:31:50.741+0800","caller":"web_app/main.go:98","msg":"Server exiting"}
+{"level":"INFO","time":"2022-04-12T21:25:35.383+0800","caller":"logger/logger.go:87","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.010301671}
+{"level":"INFO","time":"2022-04-12T21:30:08.961+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.00024235}
+{"level":"FATAL","time":"2022-04-12T21:30:32.775+0800","caller":"web_app/main.go:77","msg":"listen","error":"listen tcp :8081: bind: address already in use"}
+{"level":"INFO","time":"2022-04-12T21:30:35.329+0800","caller":"logger/logger.go:87","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.6.1","errors":"","cost":0.000183266}

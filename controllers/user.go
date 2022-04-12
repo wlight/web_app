@@ -2,13 +2,12 @@ package controllers
 
 import (
 	"errors"
+	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
 	"web_app/dao/mysql"
 	"web_app/logic"
 	"web_app/models"
-
-	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
 )
 
 // SignUpHandler 处理用户注册请求的函数
@@ -62,7 +61,7 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	// 2. 登录逻辑
-	token, err := logic.Login(p)
+	aToken, rToken, err := logic.Login(p)
 	if err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
 		if errors.Is(err, mysql.ErrorInvaildPassword) {
@@ -72,6 +71,12 @@ func LoginHandler(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
+
+	token := map[string]string{
+		"aToken": aToken,
+		"rToken": rToken,
+	}
+
 	// 3. 返回响应
 	ResponseSuccess(c, token)
 }
