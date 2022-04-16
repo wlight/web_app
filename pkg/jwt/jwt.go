@@ -3,14 +3,13 @@ package jwt
 import (
 	"errors"
 	"github.com/golang-jwt/jwt"
+	"github.com/spf13/viper"
 	"time"
 )
 
 var mySigningKey = []byte("密码加盐")
 
 var keyFunc jwt.Keyfunc
-
-const TokenExpireDuration = time.Hour * 2
 
 // MyClaims 自定义声明结构体并内嵌jwt.StandardClaims
 // jwt包自带的jwt.StandardClaims只包含了官方字段
@@ -44,7 +43,7 @@ func GenToken(userId int64, username string) (aToken string, rToken string, err 
 		UserId:   userId,
 		StandardClaims: jwt.StandardClaims{
 			Issuer:    "web_app",
-			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(),
+			ExpiresAt: time.Now().Add(time.Duration(viper.GetInt("auth.jwt_expire")) * time.Hour).Unix(),
 		},
 	}
 

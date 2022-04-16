@@ -38,7 +38,7 @@ func InsertUser(user *models.User) (err error) {
 	password := encryptPassword(user.Password)
 	// 执行插入语句
 	sqlStr := "insert into user (user_id, username, password) values (?, ?, ?)"
-	_, err = db.Exec(sqlStr, user.UserId, user.Username, password)
+	_, err = db.Exec(sqlStr, user, user.Username, password)
 	return
 }
 

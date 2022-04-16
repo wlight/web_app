@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"web_app/controllers"
 	"web_app/logger"
+	"web_app/middlewares"
 )
 
 func Setup(mode string) *gin.Engine {
@@ -21,13 +22,29 @@ func Setup(mode string) *gin.Engine {
 		})
 	})
 
+	v1 := r.Group("/api/v1")
+
 	// 注册路由
-	r.POST("/signup", controllers.SignUpHandler)
+	v1.POST("/signup", controllers.SignUpHandler)
 
 	// 登录
-	r.POST("/login", controllers.LoginHandler)
+	v1.POST("/login", controllers.LoginHandler)
 	// 刷新access token
-	//r.POST("/refreshAccessToken", controllers.RefreshAccessTokenHandler)
+	//v1.POST("/refreshAccessToken", controllers.RefreshAccessTokenHandler)
+
+	v1.Use(middlewares.JWTAuthMiddleware()) // 应用jwt认证中间件
+
+	{
+		// 获取帖子的分类
+		v1.GET("/community", controllers.CommunityHandler)
+	}
+
+	// 404
+	r.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "404",
+		})
+	})
 
 	return r
 }
