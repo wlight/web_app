@@ -39,6 +39,9 @@ func Setup(mode string) *gin.Engine {
 		v1.GET("/community", controllers.CommunityHandler)
 		// 获取帖子分类详情
 		v1.GET("/community/:id", controllers.CommunityDetailHandler)
+
+		// 创建帖子
+		v1.POST("/post", controllers.CreatePostHandler)
 	}
 
 	// 404
