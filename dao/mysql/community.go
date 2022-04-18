@@ -18,7 +18,7 @@ func GetCommunityList() (list []*models.Community, err error) {
 	return list, nil
 }
 
-func GetCommunityDetail(id int64) (*models.Community, error) {
+func GetCommunityById(id int64) (*models.Community, error) {
 	detail := new(models.Community)
 	sqlStr := "select community_id, community_name, introduction from community where community_id = ?"
 

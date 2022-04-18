@@ -13,3 +13,10 @@ type Post struct {
 	Content     string    `json:"content" db:"content"`
 	CreateTime  time.Time `json:"create_time" db:"create_time"`
 }
+
+// PostDetail api请求返回的帖子详情
+type PostDetail struct {
+	*User `json:"user"`
+	*Post
+	*Community `json:"community"`
+}
