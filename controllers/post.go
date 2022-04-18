@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
+	"strconv"
 	"web_app/logic"
 	"web_app/models"
 )
@@ -41,4 +42,25 @@ func CreatePostHandler(c *gin.Context) {
 	}
 	// 返回响应
 	ResponseSuccess(c, CodeSuccess)
+}
+
+func GetPostDetailHandler(c *gin.Context) {
+	idStr := c.Param("id")
+
+	id, err := strconv.ParseInt(idStr, 10, 64)
+	if err != nil {
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+
+	// 获取帖子详情
+	post, err := logic.GetPostById(id)
+	if err != nil {
+		zap.L().Error("logic getPostById failed", zap.Error(err))
+		ResponseError(c, CodeServerErr)
+		return
+	}
+	// 返回响应
+	ResponseSuccess(c, post)
+	return
 }
