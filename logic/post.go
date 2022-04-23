@@ -48,3 +48,38 @@ func GetPostById(pid int64) (*models.PostDetail, error) {
 
 	return postDetail, err
 }
+
+// GetPostList 获取帖子列表
+func GetPostList(pageIndex, pageSize int64) (data []*models.PostDetail, err error) {
+	postList, err := mysql.GetPostList(pageIndex, pageSize)
+	if err != nil {
+		return nil, err
+	}
+	var posts = make([]*models.PostDetail, 0, len(postList))
+	for _, post := range postList {
+		// 获取用户信息
+		user, err := mysql.GetUserById(post.AuthorId)
+		if err != nil {
+			zap.L().Error("mysql.getUserById(post.AuthorId) failed.",
+				zap.Int64("userid", post.AuthorId),
+				zap.Error(err))
+			continue
+		}
+
+		// 获取分类详情
+		community, err := mysql.GetCommunityById(post.CommunityId)
+		if err != nil {
+			zap.L().Error("mysql.GetCommunityById(post.CommunityId) failed",
+				zap.Int64("post_id", post.CommunityId),
+				zap.Error(err))
+			continue
+		}
+		postDetail := &models.PostDetail{
+			User:      user,
+			Post:      post,
+			Community: community,
+		}
+		posts = append(posts, postDetail)
+	}
+	return posts, err
+}

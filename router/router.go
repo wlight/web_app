@@ -45,6 +45,9 @@ func Setup(mode string) *gin.Engine {
 
 		// 帖子详情
 		v1.GET("/post/:id", controllers.GetPostDetailHandler)
+		// 帖子列表
+		v1.GET("/post/list", controllers.GetPsotListHandler)
+
 	}
 
 	// 404

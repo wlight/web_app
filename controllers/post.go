@@ -64,3 +64,33 @@ func GetPostDetailHandler(c *gin.Context) {
 	ResponseSuccess(c, post)
 	return
 }
+
+// GetPsotListHandler 获取帖子列表处理函数
+func GetPsotListHandler(c *gin.Context) {
+	// 获取分页参数
+	pageIndexStr := c.Query("pageIndex")
+	pageSizeStr := c.Query("pageSize")
+
+	var (
+		pageIndex int64
+		pageSize  int64
+	)
+	pageIndex, err := strconv.ParseInt(pageIndexStr, 10, 64)
+	if err != nil {
+		pageIndex = 1
+	}
+	pageSize, err = strconv.ParseInt(pageSizeStr, 10, 64)
+	if err != nil {
+		pageSize = 10
+	}
+	list, err := logic.GetPostList(pageIndex, pageSize)
+	if err != nil {
+		zap.L().Error("logic GetPostList failed", zap.Int64("pageIndex", pageIndex), zap.Int64("pageSize", pageSize), zap.Error(err))
+		ResponseError(c, CodeServerErr)
+		return
+	}
+	// 返回响应
+	ResponseSuccess(c, list)
+
+	return
+}
