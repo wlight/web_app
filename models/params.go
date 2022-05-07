@@ -20,3 +20,8 @@ type ParamCreatePost struct {
 	Title       string `json:"title" binding:"required"`
 	Content     string `json:"content" db:"content" binding:"required"`
 }
+
+type ParamVoteData struct {
+	PostId    int64 `json:"post_id,string" binding:"required"`       // 贴子id
+	Direction int8  `json:"direction,string" binding:"oneof=1 0 -1"` // 赞成(1)反对(-1)取消投票(0)
+}

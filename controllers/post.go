@@ -27,7 +27,7 @@ func CreatePostHandler(c *gin.Context) {
 		return
 	}
 	// 获取当前登录用户id
-	userId, err := getUserId(c)
+	userId, err := getCurrentUserId(c)
 	if err != nil {
 		ResponseError(c, CodeServerErr)
 		return
@@ -65,8 +65,8 @@ func GetPostDetailHandler(c *gin.Context) {
 	return
 }
 
-// GetPsotListHandler 获取帖子列表处理函数
-func GetPsotListHandler(c *gin.Context) {
+// GetPostListHandler 获取帖子列表处理函数
+func GetPostListHandler(c *gin.Context) {
 	// 获取分页参数
 	pageIndexStr := c.Query("pageIndex")
 	pageSizeStr := c.Query("pageSize")
