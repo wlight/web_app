@@ -94,3 +94,31 @@ func GetPostListHandler(c *gin.Context) {
 
 	return
 }
+
+// GetPostListHandler2 获取帖子列表处理函数，按照时间或者分数查询
+func GetPostListHandler2(c *gin.Context) {
+	// 获取参数, /post/list2?pageIndex=1&pageSize=10&order=time
+	p := &models.ParamPostList{
+		PageIndex: 1,
+		PageSize:  10,
+		Order:     models.OrderTime,
+	}
+	err := c.ShouldBindQuery(p)
+	if err != nil {
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+
+	// 获取数据
+	list, err := logic.GetPostList2(p)
+	if err != nil {
+		zap.L().Error("logic.GetPostList2 failed", zap.Error(err))
+		ResponseError(c, CodeServerErr)
+		return
+	}
+
+	// 返回响应
+	ResponseSuccess(c, list)
+
+	return
+}
